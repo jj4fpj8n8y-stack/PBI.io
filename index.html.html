@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Buku Panduan Media Pembelajaran Game Ular Tangga</title>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;800&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7faf8;--card:#fff;--ink:#17323b;--mut:#51666d;--teal:#0f5c6e;--teal2:#0b4553;--sun:#f4b83a;--coral:#e8603c;--sky:#d9eef2;--line:#cfdde0;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root:not([data-theme="light"]){}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1b20;--card:#15272e;--ink:#e6f0f2;--mut:#9fb4ba;--teal:#5cc0d6;--teal2:#0b2e38;--sky:#1b3640;--line:#2a444d}}
+:root[data-theme="dark"]{--bg:#0e1b20;--card:#15272e;--ink:#e6f0f2;--mut:#9fb4ba;--teal:#5cc0d6;--teal2:#0b2e38;--sky:#1b3640;--line:#2a444d}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.75 "Source Serif 4",Georgia,serif}
+h1,h2,h3,.ui{font-family:Lexend,system-ui,sans-serif}
+a{color:var(--teal)}
+:focus-visible{outline:3px solid var(--coral);outline-offset:2px}
+nav{position:sticky;top:0;z-index:5;background:var(--teal2);color:#fff;display:flex;gap:6px;align-items:center;padding:8px 16px;font:600 14px Lexend,sans-serif;overflow-x:auto}
+nav a{color:#fff;text-decoration:none;padding:6px 12px;border-radius:20px;white-space:nowrap}
+nav a:hover{background:rgba(255,255,255,.15)}
+.cover{background:var(--teal2);color:#fff;padding:56px 20px 64px}
+.cwrap{max-width:1040px;margin:auto;display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+.cover h1{font-size:clamp(30px,5vw,52px);line-height:1.1;margin:0 0 16px;font-weight:800}
+.tag{font-size:20px;font-style:italic;color:var(--sun);margin:0 0 16px}
+.cover p{max-width:56ch}
+.btn{display:inline-block;background:var(--sun);color:#2a1d00;font:600 16px Lexend,sans-serif;padding:14px 28px;border-radius:12px;text-decoration:none;border:0;cursor:pointer}
+.btn:hover{background:#ffc94f}
+.meta{margin-top:28px;border-top:1px solid rgba(255,255,255,.3);padding-top:14px;font:14px Lexend,sans-serif}
+[contenteditable]{border-bottom:1px dashed var(--sun);padding:0 4px}
+.cover svg{width:100%;height:auto}
+main{max-width:860px;margin:auto;padding:0 20px 60px}
+section{padding:48px 0 8px;border-bottom:1px solid var(--line)}
+h2{font-size:28px;line-height:1.25;margin:0 0 18px;color:var(--teal)}
+h3{font-size:19px;margin:26px 0 8px}
+ul,ol{padding-left:24px}li{margin:4px 0}
+.toc{columns:2;gap:30px;padding-left:28px}
+.toc a{text-decoration:none}
+.box{background:var(--sky);border-left:5px solid var(--sun);padding:14px 18px;border-radius:0 10px 10px 0;margin:18px 0}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:16px;background:var(--card)}
+.tw{overflow-x:auto}
+th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+th{background:var(--teal2);color:#fff;font-family:Lexend,sans-serif;font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.card h3{margin-top:0}
+.steps{counter-reset:s;list-style:none;padding:0}
+.steps li{counter-increment:s;display:flex;gap:14px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:10px 0}
+.steps li:before{content:counter(s);flex:none;width:34px;height:34px;border-radius:50%;background:var(--coral);color:#fff;font:700 16px/34px Lexend,sans-serif;text-align:center}
+.ans{background:var(--sky);border:0;color:var(--ink);padding:6px 12px;border-radius:8px;font:600 13px Lexend,sans-serif;cursor:pointer}
+.ans[aria-expanded=true]{background:var(--sun);color:#2a1d00}
+.a{display:none;margin-top:8px;font-size:15px}.a.on{display:block}
+.qr{border:3px dashed var(--teal);border-radius:18px;padding:28px;text-align:center;background:var(--card)}
+.qrbox{width:240px;height:240px;margin:16px auto;border-radius:12px;background:var(--sky);display:grid;place-items:center;color:var(--mut);font:14px Lexend,sans-serif;overflow:hidden}
+.qrbox img{width:100%;height:100%;object-fit:contain;background:#fff}
+input[type=text]{width:100%;max-width:420px;padding:10px 12px;border:1px solid var(--line);border-radius:8px;font:16px Lexend,sans-serif;background:var(--card);color:var(--ink)}
+footer{background:var(--teal2);color:#cfe3e8;text-align:center;padding:24px;font:14px Lexend,sans-serif}
+@media(max-width:760px){.cwrap{grid-template-columns:1fr}.toc{columns:1}}
+@media print{nav,.btn,.ans{display:none}.a{display:block}}
+</style>
+</head>
+<body>
+<nav class="ui"><b>Panduan Ular Tangga</b><a href="#daftar-isi">Daftar Isi</a><a href="#bab1">Pendahuluan</a><a href="#bab7">Petunjuk</a><a href="#bab9">Pertanyaan</a><a href="#bab12">Evaluasi</a><a href="#akses">Akses Game</a></nav>
+
+<header class="cover" id="beranda"><div class="cwrap">
+<div>
+<h1>BUKU PANDUAN MEDIA PEMBELAJARAN GAME ULAR TANGGA</h1>
+<p class="tag">“Belajar Sambil Bermain, Meningkatkan Pengetahuan dengan Cara Menyenangkan.”</p>
+<p>Buku panduan digital untuk guru dan peserta didik yang menjelaskan tujuan, materi, perlengkapan, aturan, dan evaluasi penggunaan media pembelajaran berbasis permainan ular tangga.</p>
+<a class="btn" href="#kata-pengantar">Mulai Membaca</a>
+<div class="meta">Disusun oleh: <span contenteditable="true" spellcheck="false">[Nama Penyusun]</span><br>Tahun: <span contenteditable="true" spellcheck="false">2026</span> <small>(klik untuk mengubah)</small></div>
+</div>
+<svg viewBox="0 0 420 380" role="img" aria-label="Ilustrasi papan ular tangga, dadu, pion, dan buku">
+<rect x="20" y="20" width="300" height="300" rx="14" fill="#fff" stroke="#f4b83a" stroke-width="6"/>
+<g id="g"></g>
+<path d="M60 290 C 110 240, 40 200, 100 160" stroke="#e8603c" stroke-width="12" fill="none" stroke-linecap="round"/>
+<circle cx="100" cy="158" r="9" fill="#e8603c"/>
+<g stroke="#8a5a2b" stroke-width="7"><line x1="230" y1="290" x2="270" y2="110"/><line x1="262" y1="296" x2="302" y2="116"/></g>
+<g stroke="#8a5a2b" stroke-width="5"><line x1="238" y1="250" x2="270" y2="256"/><line x1="246" y1="210" x2="278" y2="216"/><line x1="254" y1="170" x2="286" y2="176"/><line x1="262" y1="130" x2="294" y2="136"/></g>
+<g transform="translate(300 250) rotate(12)"><rect width="80" height="80" rx="14" fill="#fff" stroke="#17323b" stroke-width="4"/><g fill="#17323b"><circle cx="20" cy="20" r="6"/><circle cx="60" cy="20" r="6"/><circle cx="40" cy="40" r="6"/><circle cx="20" cy="60" r="6"/><circle cx="60" cy="60" r="6"/></g></g>
+<g transform="translate(150 215)"><circle cx="0" cy="-34" r="14" fill="#f4b83a"/><path d="M-18 0 Q0 -40 18 0 Z" fill="#f4b83a"/><rect x="-24" y="0" width="48" height="10" rx="5" fill="#d79a1d"/></g>
+<g transform="translate(40 325)"><rect width="150" height="40" rx="5" fill="#e8603c"/><rect y="40" width="150" height="6" fill="#fff"/><rect x="0" y="-6" width="140" height="6" fill="#fff" opacity=".6"/></g>
+</svg>
+</div></header>
+
+<main>
+<section id="kata-pengantar"><h2>Kata Pengantar</h2>
+<p>Puji syukur penyusun panjatkan ke hadirat Tuhan Yang Maha Esa atas rahmat dan karunia-Nya sehingga Buku Panduan Media Pembelajaran Game Ular Tangga ini dapat diselesaikan dengan baik.</p>
+<p>Buku panduan ini disusun untuk membantu guru dan peserta didik memahami cara menggunakan media pembelajaran berbasis permainan secara tepat, terarah, dan bermakna. Game Ular Tangga Edukatif memadukan permainan papan klasik dengan pertanyaan materi pembelajaran sehingga kegiatan belajar menjadi lebih menyenangkan.</p>
+<p>Penyusun berharap media ini dapat meningkatkan keaktifan, motivasi, dan pemahaman peserta didik, serta menjadi referensi bagi pendidik dalam mengembangkan pembelajaran yang inovatif.</p>
+<p>Penyusun mengucapkan terima kasih kepada semua pihak yang telah membantu penyusunan buku panduan ini. Kritik dan saran yang membangun sangat penyusun harapkan demi penyempurnaan di masa mendatang.</p>
+<p><i>Penyusun</i></p></section>
+
+<section id="daftar-isi"><h2>Daftar Isi</h2><ol class="toc" id="toc"></ol></section>
+
+<section id="bab1"><h2>Bab I – Pendahuluan</h2>
+<h3>A. Latar Belakang</h3>
+<p>Media pembelajaran membantu guru menyampaikan materi dan membantu peserta didik menangkapnya dengan lebih mudah. Tanpa media yang menarik, kegiatan belajar cenderung berjalan satu arah dan cepat membosankan.</p>
+<p>Karena itu, pembelajaran memerlukan inovasi yang menyenangkan. Permainan dapat menjadi sarana belajar karena peserta didik terlibat langsung, berinteraksi dengan teman, dan termotivasi menyelesaikan tantangan.</p>
+<p>Permainan ular tangga dipilih karena sudah dikenal luas, aturannya sederhana, dan mudah diisi dengan pertanyaan materi. Peserta didik tidak perlu belajar permainan baru, sehingga perhatian dapat langsung tertuju pada materi.</p>
+<h3>B. Rumusan Tujuan Pengembangan</h3>
+<ul><li>Mengembangkan media pembelajaran yang menarik.</li><li>Meningkatkan keaktifan peserta didik.</li><li>Membantu peserta didik memahami materi.</li><li>Menciptakan pengalaman belajar yang menyenangkan.</li></ul>
+<h3>C. Manfaat Media</h3>
+<div class="grid">
+<div class="card"><h3>Bagi Guru</h3><p>Memudahkan penyampaian materi, menyediakan variasi metode, dan membantu mengamati pemahaman peserta didik.</p></div>
+<div class="card"><h3>Bagi Peserta Didik</h3><p>Belajar menjadi menyenangkan, meningkatkan keberanian menjawab, dan melatih kerja sama.</p></div>
+<div class="card"><h3>Bagi Pembelajaran</h3><p>Suasana kelas lebih hidup, partisipasi meningkat, dan materi lebih mudah diingat.</p></div></div></section>
+
+<section id="bab2"><h2>Bab II – Pengenalan Media Pembelajaran</h2>
+<h3>Pengertian Media Pembelajaran</h3><p>Media pembelajaran adalah alat atau sarana yang digunakan untuk menyampaikan pesan atau materi dari guru kepada peserta didik agar proses belajar lebih efektif dan menarik.</p>
+<h3>Game-Based Learning</h3><p>Pembelajaran berbasis permainan (<i>Game-Based Learning</i>) adalah pendekatan yang memakai permainan dengan tujuan belajar yang jelas. Peserta didik memperoleh pengetahuan melalui aktivitas bermain.</p>
+<h3>Game Ular Tangga Edukatif</h3><p>Permainan ular tangga dengan 25 kotak. Setiap kotak berisi pertanyaan atau tantangan dari berbagai materi. Pemain melempar dadu, melangkah, lalu menjawab pertanyaan pada kotak yang ditempati.</p>
+<h3>Karakteristik</h3><ul><li>Aturan sederhana dan mudah diikuti.</li><li>Ada unsur kejutan dari lemparan dadu.</li><li>Setiap kotak memuat tugas belajar.</li><li>Dapat dimainkan bergantian atau berkelompok.</li><li>Tersedia dalam bentuk papan fisik dan versi digital.</li></ul>
+<div class="box"><b>Mengapa permainan?</b> Bermain menurunkan rasa takut salah, menumbuhkan semangat, dan membuat peserta didik mengingat materi lewat pengalaman, bukan hafalan semata.</div></section>
+
+<section id="bab3"><h2>Bab III – Identitas Media</h2>
+<div class="tw"><table><tr><th>Komponen</th><th>Keterangan</th></tr>
+<tr><td>Nama media</td><td>Game Ular Tangga Edukatif</td></tr>
+<tr><td>Jenis media</td><td>Media pembelajaran berbasis permainan</td></tr>
+<tr><td>Bentuk media</td><td>Permainan papan ular tangga</td></tr>
+<tr><td>Jumlah kotak</td><td>25 kotak</td></tr>
+<tr><td>Perlengkapan</td><td>Papan permainan, dadu, dan pion</td></tr>
+<tr><td>Sistem permainan</td><td>Pemain melempar dadu, bergerak sesuai angka, dan menjawab pertanyaan pada kotak yang ditempati</td></tr>
+<tr><td>Sasaran</td><td>Peserta didik</td></tr>
+<tr><td>Pengguna pendamping</td><td>Guru atau pendidik</td></tr></table></div>
+<h3>Gambar Prototype Media</h3>
+<div class="qrbox" style="width:100%;max-width:420px;height:300px" id="proto">Unggah gambar prototype<br>(pilih berkas di bawah)</div>
+<p><input type="file" accept="image/*" id="protoIn" aria-label="Unggah gambar prototype"> <small>Gambar hanya tampil di perangkat Anda dan tidak disimpan.</small></p></section>
+
+<section id="bab4"><h2>Bab IV – Tujuan Pembelajaran</h2>
+<ol><li><b>Menambah wawasan.</b> Peserta didik mengenal banyak hal dari pertanyaan lintas materi.</li>
+<li><b>Melatih berpikir kritis.</b> Peserta didik menimbang dan menyusun jawaban yang tepat.</li>
+<li><b>Meningkatkan motivasi belajar.</b> Unsur permainan membuat peserta didik ingin terus mencoba.</li>
+<li><b>Mendorong keaktifan.</b> Setiap pemain mendapat giliran untuk berpartisipasi.</li>
+<li><b>Melatih komunikasi.</b> Peserta didik menyampaikan jawaban dan berdiskusi dengan sopan.</li>
+<li><b>Menciptakan belajar yang menyenangkan.</b> Suasana santai membantu materi lebih mudah diterima.</li></ol></section>
+
+<section id="bab5"><h2>Bab V – Materi Pembelajaran</h2>
+<div class="grid">
+<div class="card"><h3>A. Pengetahuan Umum</h3><ul><li>Hewan peliharaan</li><li>Provinsi di Indonesia</li><li>Pulau besar di Indonesia</li><li>Ibu kota Indonesia</li><li>Presiden pertama Indonesia</li></ul></div>
+<div class="card"><h3>B. Teknologi</h3><ul><li>Pengertian teknologi</li><li>Manfaat teknologi</li></ul></div>
+<div class="card"><h3>C. Lingkungan</h3><ul><li>Pengertian lingkungan hidup</li><li>Cara menjaga bumi</li><li>Pentingnya menjaga lingkungan</li><li>Cara menjaga kebersihan lingkungan</li></ul></div>
+<div class="card"><h3>D. Budaya Indonesia</h3><ul><li>Tari tradisional</li><li>Alat musik tradisional</li><li>Makanan khas</li><li>Keberagaman budaya</li><li>Makna Bhinneka Tunggal Ika</li></ul></div>
+<div class="card"><h3>E. Pancasila dan Sosial</h3><ul><li>Pengertian Pancasila</li><li>Demokrasi</li><li>Gotong royong</li><li>Nilai kebersamaan</li></ul></div>
+<div class="card"><h3>F. Bahasa Indonesia</h3><ul><li>Antonim</li><li>Fungsi tanda titik</li><li>Membuat kalimat tanya</li></ul></div></div>
+<div class="box">Penjelasan singkat tiap materi: teknologi adalah hasil pemikiran manusia untuk memudahkan pekerjaan; lingkungan hidup adalah segala sesuatu di sekitar kita; Pancasila adalah dasar negara dan pandangan hidup bangsa; antonim adalah kata yang berlawanan arti.</div></section>
+
+<section id="bab6"><h2>Bab VI – Alat dan Bahan</h2>
+<div class="grid" id="alat"></div></section>
+
+<section id="bab7"><h2>Bab VII – Petunjuk Penggunaan Media</h2>
+<h3>A. Tahap Persiapan</h3><ol class="steps"><li>Guru mempersiapkan media pembelajaran.</li><li>Guru memastikan website permainan dapat diakses.</li><li>Guru mempersiapkan peserta didik.</li><li>Guru menjelaskan tujuan dan manfaat permainan.</li><li>Guru menjelaskan aturan permainan.</li></ol>
+<h3>B. Tahap Pelaksanaan</h3><ol class="steps"><li>Peserta didik membuka website permainan ular tangga.</li><li>Peserta didik mengikuti instruksi permainan.</li><li>Pemain melempar dadu untuk menentukan langkah.</li><li>Pemain bergerak sesuai angka dadu.</li><li>Pemain menjawab pertanyaan sesuai kotak yang ditempati.</li><li>Guru mendampingi dan memberikan arahan apabila diperlukan.</li></ol>
+<h3>C. Tahap Akhir</h3><ol class="steps"><li>Permainan diselesaikan sesuai aturan.</li><li>Guru memberikan apresiasi.</li><li>Guru memberikan penguatan materi.</li><li>Guru mengajak peserta didik melakukan refleksi.</li><li>Guru menyampaikan kesimpulan pembelajaran.</li></ol></section>
+
+<section id="bab8"><h2>Bab VIII – Aturan Permainan</h2>
+<div class="grid" id="aturan"></div></section>
+
+<section id="bab9"><h2>Bab IX – Daftar Pertanyaan Permainan</h2>
+<p>Klik “Lihat Jawaban” untuk membuka dan menutup contoh jawaban. Guru dapat menerima jawaban lain yang masuk akal.</p>
+<div class="tw"><table><thead><tr><th>Kotak</th><th>Pertanyaan</th><th>Kategori</th><th>Contoh jawaban</th></tr></thead><tbody id="qs"></tbody></table></div></section>
+
+<section id="bab10"><h2>Bab X – Peran Guru dan Peserta Didik</h2>
+<div class="grid">
+<div class="card"><h3>Peran Guru</h3><ul><li>Fasilitator</li><li>Pembimbing</li><li>Pengarah permainan</li><li>Evaluator</li><li>Pemberi penguatan materi</li></ul></div>
+<div class="card"><h3>Peran Peserta Didik</h3><ul><li>Mengikuti aturan permainan</li><li>Menjawab pertanyaan</li><li>Berpartisipasi aktif</li><li>Berdiskusi dengan teman</li><li>Menunjukkan sportivitas</li></ul></div></div></section>
+
+<section id="bab11"><h2>Bab XI – Kelebihan dan Kekurangan Media</h2>
+<h3>Kelebihan</h3><ul><li>Menambah wawasan pengetahuan.</li><li>Melatih berpikir kritis.</li><li>Menciptakan pembelajaran menyenangkan.</li><li>Meningkatkan motivasi.</li><li>Meningkatkan interaksi sosial.</li></ul>
+<h3>Kekurangan dan Solusi</h3>
+<div class="tw"><table><tr><th>Kekurangan</th><th>Solusi</th></tr>
+<tr><td>Memerlukan persiapan</td><td>Siapkan papan, dadu, pion, dan cek website sebelum pembelajaran.</td></tr>
+<tr><td>Memerlukan pendampingan guru</td><td>Bagi peserta didik ke dalam kelompok dan tunjuk ketua kelompok.</td></tr>
+<tr><td>Memerlukan perangkat dan internet</td><td>Gunakan papan fisik atau unduh materi sebagai cadangan.</td></tr>
+<tr><td>Membutuhkan pengelolaan waktu</td><td>Tetapkan batas waktu bermain dan waktu menjawab tiap giliran.</td></tr></table></div></section>
+
+<section id="bab12"><h2>Bab XII – Evaluasi Pembelajaran</h2>
+<div class="grid">
+<div class="card"><h3>A. Penilaian Pengetahuan</h3><p>Menilai kemampuan peserta didik menjawab pertanyaan permainan: ketepatan isi jawaban dan pemahaman konsep.</p></div>
+<div class="card"><h3>B. Penilaian Keterampilan</h3><p>Menilai keterampilan menyampaikan jawaban, bekerja sama, dan mengikuti alur permainan.</p></div>
+<div class="card"><h3>C. Penilaian Sikap</h3><p>Menilai sportivitas, kejujuran, disiplin, dan kerja sama selama bermain.</p></div></div>
+<p><small>Catatan: bagian evaluasi pada naskah sumber terpotong; isi di atas adalah rancangan yang dapat disesuaikan.</small></p>
+<div class="tw"><table><tr><th>Skor</th><th>Kriteria</th></tr><tr><td>4</td><td>Jawaban tepat, lengkap, dan disampaikan percaya diri</td></tr><tr><td>3</td><td>Jawaban tepat namun kurang lengkap</td></tr><tr><td>2</td><td>Jawaban sebagian benar</td></tr><tr><td>1</td><td>Jawaban belum tepat; perlu bimbingan</td></tr></table></div></section>
+
+<section id="penutup"><h2>Penutup</h2>
+<p>Game Ular Tangga Edukatif diharapkan menjadi alternatif media yang membuat belajar lebih hidup dan bermakna. Keberhasilannya bergantung pada persiapan dan pendampingan guru serta antusiasme peserta didik. Semoga buku panduan ini bermanfaat.</p></section>
+
+<section id="akses"><h2>Akses Website Permainan</h2>
+<div class="qr"><h3 style="margin-top:0">Pindai untuk memainkan Game Ular Tangga</h3>
+<div class="qrbox" id="qrbox">Tempat QR Code</div>
+<p><input type="file" accept="image/*" id="qrIn" aria-label="Unggah gambar QR Code"></p>
+<p><input type="text" id="url" placeholder="Tempel tautan website permainan"><br><br><a class="btn" id="go" href="#akses">Buka Website Permainan</a></p>
+<small>Gambar QR dan tautan hanya tampil di perangkat Anda. Untuk memasang secara permanen, kirim gambar QR dan tautan kepada saya.</small></div></section>
+</main>
+<footer>Buku Panduan Media Pembelajaran Game Ular Tangga © <span id="yr"></span></footer>
+
+<script>
+const $=s=>document.querySelector(s);
+const chap=[["kata-pengantar","Kata Pengantar"],["bab1","Pendahuluan"],["bab2","Pengenalan Media Pembelajaran"],["bab3","Identitas Media"],["bab4","Tujuan Pembelajaran"],["bab5","Materi Pembelajaran"],["bab6","Alat dan Bahan"],["bab7","Petunjuk Penggunaan Media"],["bab8","Aturan Permainan"],["bab10","Peran Guru dan Peserta Didik"],["bab11","Kelebihan dan Kekurangan Media"],["bab12","Evaluasi Pembelajaran"],["penutup","Penutup"],["akses","Akses Website Permainan"]];
+$("#toc").innerHTML=chap.map(c=>`<li><a href="#${c[0]}">${c[1]}</a></li>`).join("");
+$("#yr").textContent=new Date().getFullYear();
+// board squares
+let g="";for(let r=0;r<5;r++)for(let c=0;c<5;c++){const n=r%2==0?r*5+c+1:r*5+(4-c)+1,y=300-r*56-56+20,x=20+c*60;g+=`<rect x="${x}" y="${y-20+8}" width="60" height="56" fill="${(r+c)%2?'#d9eef2':'#fff7e0'}" stroke="#cfdde0"/><text x="${x+6}" y="${y+10}" font-size="11" fill="#51666d" font-family="Lexend,sans-serif">${n}</text>`}
+$("#g").innerHTML=g.replace(/y="(\d+)"/g,(m,v)=>m);
+const ico=["🎲","🎯","♟️","💻","📱","🌐"];
+const alat=[["Papan permainan","Papan ular tangga berisi 25 kotak."],["Dadu","Satu buah dadu untuk menentukan langkah."],["Pion pemain","Penanda posisi tiap pemain."],["Website permainan","Versi digital ular tangga (akses lewat QR Code)."],["Perangkat pendukung","Smartphone, laptop, atau tablet."],["Koneksi internet","Dibutuhkan untuk mengakses permainan digital."]];
+const ic=["▦","⚀","♟","🖥","📱","📶"];
+$("#alat").innerHTML=alat.map((a,i)=>`<div class="card"><div style="font-size:34px" aria-hidden="true">${ic[i]}</div><h3>${i+1}. ${a[0]}</h3><p>${a[1]}</p></div>`).join("");
+const at=[["⚀","Lempar dadu untuk menentukan jumlah langkah."],["♟","Pindahkan pion sesuai angka dadu."],["❓","Jawab pertanyaan pada kotak tempat pion berhenti."],["✅","Jika jawaban benar, pemain melanjutkan permainan pada giliran berikutnya."],["⏸","Jika jawaban salah, pemain tetap berada di tempat."],["🏁","Capai kotak FINISH untuk menjadi pemenang."]];
+$("#aturan").innerHTML=at.map((a,i)=>`<div class="card"><div style="font-size:34px" aria-hidden="true">${a[0]}</div><h3>Aturan ${i+1}</h3><p>${a[1]}</p></div>`).join("");
+const Q=[["Sebutkan satu hewan peliharaan!","Pengetahuan Umum","Kucing, anjing, atau kelinci."],["Apa yang kamu lakukan untuk menjaga bumi?","Lingkungan","Membuang sampah pada tempatnya dan menanam pohon."],["Mengapa kita harus menjaga lingkungan?","Lingkungan","Agar bumi tetap bersih, sehat, dan nyaman dihuni."],["Apa itu Pancasila?","Pancasila dan Sosial","Dasar negara dan pandangan hidup bangsa Indonesia."],["Sebutkan salah satu makanan khas Indonesia!","Budaya","Rendang, gudeg, atau pempek."],["Apa warna bendera Indonesia?","Pengetahuan Umum","Merah dan putih."],["Apa itu gotong royong?","Pancasila dan Sosial","Bekerja sama untuk menyelesaikan pekerjaan bersama."],["Lompat sambil tepuk tangan 3 kali!","Tantangan Fisik","Peserta melakukan gerakan yang diminta."],["Sebutkan satu tari tradisional Indonesia!","Budaya","Tari Pendet, Reog, atau Saman."],["Apa fungsi tanda titik (.) dalam kalimat?","Bahasa Indonesia","Mengakhiri kalimat pernyataan."],["Apa arti slogan Bhinneka Tunggal Ika?","Budaya","Berbeda-beda tetapi tetap satu jua."],["Apa itu demokrasi?","Pancasila dan Sosial","Pemerintahan dari rakyat, oleh rakyat, dan untuk rakyat."],["Sebutkan cara menjaga kebersihan lingkungan!","Lingkungan","Membuang sampah pada tempatnya dan kerja bakti."],["Apa manfaat belajar sejarah?","Pengetahuan Umum","Mengetahui masa lalu dan mengambil pelajaran untuk masa depan."],["Buatlah kalimat pertanyaan!","Bahasa Indonesia","Contoh: Siapa namamu?"],["Siapa presiden pertama Indonesia?","Pengetahuan Umum","Ir. Soekarno."],["Apa ibu kota Indonesia?","Pengetahuan Umum","Jakarta (Ibu Kota Nusantara sedang dibangun sebagai ibu kota baru)."],["Sebutkan satu pulau besar di Indonesia!","Pengetahuan Umum","Sumatra, Jawa, Kalimantan, Sulawesi, atau Papua."],["Antonim dari kata bersih adalah?","Bahasa Indonesia","Kotor."],["Apa yang kamu ketahui tentang keberagaman?","Budaya","Perbedaan suku, agama, bahasa, dan budaya yang harus dihargai."],["Sebutkan satu provinsi di Indonesia!","Pengetahuan Umum","Jawa Timur, Bali, atau Aceh."],["Apa itu teknologi?","Teknologi","Hasil pemikiran manusia untuk memudahkan pekerjaan."],["Sebutkan manfaat teknologi!","Teknologi","Mempermudah komunikasi, belajar, dan bekerja."],["Sebutkan contoh alat musik tradisional!","Budaya","Angklung, gamelan, atau sasando."],["Apa itu lingkungan hidup?","Lingkungan","Segala sesuatu di sekitar kita yang memengaruhi kehidupan."]];
+$("#qs").innerHTML=Q.map((q,i)=>`<tr><td>${i+1}</td><td>${q[0]}</td><td>${q[1]}</td><td><button class="ans" aria-expanded="false" aria-controls="a${i}">Lihat Jawaban</button><div class="a" id="a${i}">${q[2]}</div></td></tr>`).join("");
+$("#qs").addEventListener("click",e=>{const b=e.target.closest(".ans");if(!b)return;const d=$("#"+b.getAttribute("aria-controls")),on=d.classList.toggle("on");b.setAttribute("aria-expanded",on);b.textContent=on?"Tutup Jawaban":"Lihat Jawaban"});
+function img(inp,box){$(inp).addEventListener("change",e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{$(box).innerHTML=`<img alt="Gambar unggahan" src="${r.result}">`};r.readAsDataURL(f)})}
+img("#protoIn","#proto");img("#qrIn","#qrbox");
+$("#go").addEventListener("click",e=>{const u=$("#url").value.trim();if(/^https?:\/\//.test(u)){e.currentTarget.href=u;e.currentTarget.target="_blank";e.currentTarget.rel="noopener"}else{e.preventDefault();$("#url").focus()}});
+</script>
+</body>
+</html>
